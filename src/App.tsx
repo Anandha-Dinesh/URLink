@@ -1,15 +1,27 @@
-import Home from "./pages/home";
+import React from "react";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/home";
+import CustomTextBox from "./pages/custom_text";
 
 function App() {
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <Home />,
+  //   },
+  //   {
+  //     path: "/text",
+  //     element: <CustomTextBox />,
+  //   },
+  // ]);
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" Component={Home} />
-    //     <Route path="/Text" Component={Custom_text_box} />
-    //   </Routes>
-    // </BrowserRouter>
-    <Home />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/text" element={<CustomTextBox />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

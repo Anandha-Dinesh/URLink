@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-import { TextareaAutosize } from "@mui/base/TextareaAutosize";
+import { useNavigate } from "react-router-dom";
 import { SetQr, Props } from "../components/setQr";
 
 export default function CustomTextBox() {
@@ -10,6 +9,10 @@ export default function CustomTextBox() {
     console.log("triggered");
 
     setQrVisible(true);
+  };
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/");
   };
   return (
     <div className="flex">
@@ -31,6 +34,7 @@ export default function CustomTextBox() {
           className="mr-0" // Optional: to ensure the button is aligned to the very right
         />
       </div>
+      <div onClick={handleNavigate}>Wanna send URL to your Mobile?</div>
     </div>
   );
 }
