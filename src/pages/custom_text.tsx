@@ -15,26 +15,29 @@ export default function CustomTextBox() {
     navigate("/");
   };
   return (
-    <div className="flex">
-      {isQrVisible && <SetQr url={CustomText} />}
+    <div className="flex flex-col mt-auto ml-3">
+      {isQrVisible ? (
+        <SetQr url={CustomText} />
+      ) : (
+        <div className="text-pretty">Type something below and Scan QR</div>
+      )}
       <textarea
         id="customText"
-        rows={3}
+        className="mr-3 mt-2 mb-2 shadow-md shadow-slate-200"
+        rows={isQrVisible ? 2 : 3}
+        placeholder="Type something U want to send..."
         onChange={(e: any) => {
           setCustomText(e.target.value);
+          handleGenerateQR();
+          if (CustomText.length === 1) setQrVisible(false);
         }}
       />
-      <div className="flex justify-end w-full">
-        <input
-          type="button"
-          value="CreateURL"
-          onClick={() => {
-            handleGenerateQR();
-          }}
-          className="mr-0" // Optional: to ensure the button is aligned to the very right
-        />
+      <div className="mt-auto mb-2 ml-3 inline-block">
+        {/* <a href="/text">Want to send a Message to your mobile?</a> */}
+        <div onClick={handleNavigate} className=" underline">
+          Wanna send URL to your Mobile?
+        </div>
       </div>
-      <div onClick={handleNavigate}>Wanna send URL to your Mobile?</div>
     </div>
   );
 }

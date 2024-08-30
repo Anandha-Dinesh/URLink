@@ -25,13 +25,13 @@ export function SetQr({ url }: Props) {
     getCurrentQr();
   }, [url]);
   return (
-    <div className="w-52 h-52">
+    <div className="w-52 h-52 flex">
       <img
         src={currentQr}
         alt="QR Code"
         width={200}
         height={200}
-        className="w-52 h-52 block object-cover"
+        className="justify-center align-middle block object-cover"
       />
     </div>
   );

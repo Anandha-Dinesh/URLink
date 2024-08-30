@@ -25,7 +25,12 @@ function GetUrl() {
   return (
     <>
       <h1 className="text-3xl font-bold underline">{currentUrl}</h1>
-      <SetQr url={currentUrl} />
+      <SetQr
+        url={
+          //currentUrl
+          "publiclogo512.png"
+        }
+      />
     </>
   );
 }

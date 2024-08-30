@@ -7,14 +7,12 @@ function Home() {
     navigate("/text");
   };
   return (
-    <div className="flex">
-      <div className="w-52 h-52">
-        <GetUrl />
-      </div>
+    <div className=" flex flex-col h-full w-full">
+      <GetUrl />
 
-      <div className=" flex justify-center align-text-bottom">
+      <div className="mt-auto mb-2 ml-3 inline-block">
         {/* <a href="/text">Want to send a Message to your mobile?</a> */}
-        <div onClick={handleNavigate} className="underline">
+        <div onClick={handleNavigate} className=" underline">
           Wanna send a Message to your mobile?
         </div>
       </div>
@@ -23,3 +21,8 @@ function Home() {
 }
 
 export default Home;
+// "start": "react-scripts start",
+// "build": "webpack --config webpack.config.js",
+// "watch": "webpack -w --config webpack.config.js",
+// "test": "react-scripts test",
+// "eject": "react-scripts eject"
