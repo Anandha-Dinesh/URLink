@@ -1,0 +1,30 @@
+/* styles/home.css */
+
+/* Add some basic styling to the container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Styling for the navigation link */
+.home-link {
+  color: #3490dc; /* Tailwind's 'blue-500' */
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.home-link:hover {
+  color: #2779bd; /* Tailwind's 'blue-600' */
+}
+
+/* Additional styling for margins and alignment */
+.link-container {
+  margin-top: auto;
+  margin-bottom: 4px;
+  margin-left: 5px;
+  display: inline-block;
+}

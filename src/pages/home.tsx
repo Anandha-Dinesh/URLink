@@ -1,18 +1,20 @@
 import GetUrl from "../components/getUrl";
 import { useNavigate } from "react-router-dom";
-
+import { TitleBar } from "../components/title_bar";
+import "../styles/home.css";
 function Home() {
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/text");
   };
   return (
-    <div className=" flex flex-col h-full w-full">
+    <div className="home-container">
+      <TitleBar />
       <GetUrl />
 
-      <div className="mt-auto mb-2 ml-3 inline-block">
+      <div className="link-container">
         {/* <a href="/text">Want to send a Message to your mobile?</a> */}
-        <div onClick={handleNavigate} className=" underline">
+        <div onClick={handleNavigate} className="home-link">
           Wanna send a Message to your mobile?
         </div>
       </div>
