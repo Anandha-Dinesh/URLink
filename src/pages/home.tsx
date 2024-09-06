@@ -15,7 +15,7 @@ function Home() {
       <div className="link-container">
         {/* <a href="/text">Want to send a Message to your mobile?</a> */}
         <div onClick={handleNavigate} className="home-link">
-          Wanna send a Message to your mobile?
+          Message {"-->"} Mobile
         </div>
       </div>
     </div>

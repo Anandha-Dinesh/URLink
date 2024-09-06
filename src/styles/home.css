@@ -3,14 +3,17 @@
 /* Add some basic styling to the container */
 .home-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 20px;
 }
 
 /* Styling for the navigation link */
 .home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #3490dc; /* Tailwind's 'blue-500' */
   cursor: pointer;
   text-decoration: underline;

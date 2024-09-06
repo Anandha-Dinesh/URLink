@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SetQr, Props } from "../components/setQr";
 import { TitleBar } from "../components/title_bar";
+import "../styles/home.css";
+import "../styles/custom_text.css";
 
 export default function CustomTextBox() {
   const [CustomText, setCustomText] = useState<Props["url"]>("");
@@ -16,20 +18,20 @@ export default function CustomTextBox() {
     navigate("/");
   };
   return (
-    <div className="flex flex-col ml-3">
+    <div className="home-container">
       <TitleBar />
-      <div className={isQrVisible ? "mt-0" : "mt-10"}>
+      <div className={isQrVisible ? "qrvisible" : "qrnotvisible"}>
         {isQrVisible ? (
           <SetQr url={CustomText} />
         ) : (
-          <div className="mt-auto text-pretty">
+          <div className="qrnotvisible-text">
             Type something below and Scan QR
           </div>
         )}
       </div>
       <textarea
         id="customText"
-        className="mr-3 mt-2 mb-2 shadow-md shadow-slate-200"
+        className="textarea"
         rows={isQrVisible ? 2 : 3}
         placeholder="Type something U want to send..."
         onChange={(e: any) => {
@@ -38,10 +40,10 @@ export default function CustomTextBox() {
           if (CustomText.length === 0) setQrVisible(false);
         }}
       />
-      <div className="mt-auto mb-2 ml-3 inline-block">
+      <div className="link-container">
         {/* <a href="/text">Want to send a Message to your mobile?</a> */}
-        <div onClick={handleNavigate} className=" underline">
-          Wanna send URL to your Mobile?
+        <div onClick={handleNavigate} className="home-link">
+          URL {"-->"} Mobile
         </div>
       </div>
     </div>

@@ -1,0 +1,18 @@
+.qrnotvisible {
+  margin-top: 10;
+}
+
+.qrvisible {
+  margin-top: 0;
+}
+
+.qrnotvisible-text {
+  margin-top: auto;
+  text-wrap: pretty;
+}
+.textarea {
+  margin-right: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  box-shadow: inset;
+}
