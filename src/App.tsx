@@ -17,12 +17,14 @@ function App() {
   //   },
   // ]);
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/text" element={<CustomTextBox />} />
-      </Routes>
-    </HashRouter>
+    <div className="card">
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/text" element={<CustomTextBox />} />
+        </Routes>
+      </HashRouter>
+    </div>
   );
 }
 

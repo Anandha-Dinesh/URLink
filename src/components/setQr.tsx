@@ -1,3 +1,4 @@
+import "../styles/setQr.css";
 import React, { useState, useEffect } from "react";
 import QRCode from "qrcode";
 
@@ -25,14 +26,11 @@ export function SetQr({ url }: Props) {
     getCurrentQr();
   }, [url]);
   return (
-    <div className="w-52 h-52 flex">
-      <img
-        src={currentQr}
-        alt="QR Code"
-        width={200}
-        height={200}
-        className="justify-center align-middle block object-cover"
-      />
+    <div className="df jcc alc Qr img">
+        <img
+          src={currentQr}
+          alt="QR Code"
+        />
     </div>
   );
 }
